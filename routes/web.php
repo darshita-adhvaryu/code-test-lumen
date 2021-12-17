@@ -17,3 +17,8 @@ $router->get('/members', function () use ($router) {
     $members = App\Models\Member::all();
     return response()->json(['error' => false, 'data' => $members]);
 });
+Route::get('membersList', 'MemberController@list');
+// $router->get('/membersList', function () use ($router) {
+//     $members = App\Models\Member::all();
+//     return response()->json(['error' => false, 'data' => $members]);
+// });
